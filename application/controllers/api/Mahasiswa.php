@@ -99,5 +99,18 @@ class Mahasiswa extends REST_Controller
             'email' => $this->post('email'),
             'jurusan' => $this->post('jurusan')
         ];
+
+        if ($this->mahasiswa->updateMahasiswa($data, $id) > 0) {
+            $this->response([
+                'status' => true,
+                'message' => 'new mahasiswa has been updated'
+            ], REST_Controller::HTTP_NO_CONTENT);
+        } else {
+            //not found
+            $this->response([
+                'status' => false,
+                'message' => 'falied to update data!'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
     }
 }
