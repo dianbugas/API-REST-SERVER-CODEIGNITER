@@ -103,7 +103,7 @@ class Mahasiswa extends REST_Controller
         if ($this->mahasiswa->updateMahasiswa($data, $id) > 0) {
             $this->response([
                 'status' => true,
-                'message' => 'new mahasiswa has been updated'
+                'message' => 'data mahasiswa has been updated'
             ], REST_Controller::HTTP_NO_CONTENT);
         } else {
             //not found
