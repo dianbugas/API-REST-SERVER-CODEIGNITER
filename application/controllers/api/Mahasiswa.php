@@ -88,4 +88,9 @@ class Mahasiswa extends REST_Controller
             ], REST_Controller::HTTP_BAD_REQUEST);
         }
     }
+
+    public function index_put()
+    {
+
+    }
 }
